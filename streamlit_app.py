@@ -1,5 +1,6 @@
 import streamlit as st
+from pydataset import data
 
 st.title('🎈 App Name')
 
-st.write('Hello world!')
+st.write(data())
