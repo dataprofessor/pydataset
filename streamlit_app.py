@@ -7,6 +7,7 @@ st.title('🎈 pydataset')
 selected_data = st.sidebar.selectbox('Select a dataset', data().dataset_id)
 dataset = data()
 dataset.dataset_id
+data().dataset_id
 
 st.header('Datasets')
 st.subheader('List of dataset')
