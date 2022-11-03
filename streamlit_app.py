@@ -1,10 +1,11 @@
 import streamlit as st
+import pandas as pd
 from pydataset import data
 
 st.title('🎈 pydataset')
 
 selected_data = st.sidebar.selectbox('Select a dataset', data().dataset_id)
-data_description = pd.DataFrame(data())[dataset_id]
+data_description = data()[dataset_id]
 
 st.header('Datasets')
 st.subheader('List of dataset')
