@@ -4,7 +4,7 @@ from pydataset import data
 st.title('🎈 pydataset')
 
 selected_data = st.sidebar.selectbox('Select a dataset', data().dataset_id)
-data_description = data()
+data_description = data()[dataset_id == selected_data]
 
 st.header('Datasets')
 st.subheader('List of dataset')
