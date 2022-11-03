@@ -5,8 +5,7 @@ from pydataset import data
 st.title('🎈 pydataset')
 
 selected_data = st.sidebar.selectbox('Select a dataset', data().dataset_id)
-#data()[data()['dataset_id'] == selected_data]['title']
-dataset = data()[ data()['dataset_id'] == selected_data]
+dataset = data()[ data()['dataset_id'] == selected_data]['title']
 
 st.write(dataset)
 
