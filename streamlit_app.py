@@ -5,15 +5,13 @@ from pydataset import data
 st.title('🎈 pydataset')
 
 selected_data = st.sidebar.selectbox('Select a dataset', data().dataset_id)
-dataset = data()[ data()['dataset_id'] == selected_data]['title']
+title_data = data()[ data()['dataset_id'] == selected_data]['title']
 
-st.write(dataset)
+st.header('Datasets')
+st.subheader('List of dataset')
+with st.expander('Show list of dataset'):
+    st.write(data())
 
-
-#st.header('Datasets')
-#st.subheader('List of dataset')
-#with st.expander('Show list of dataset'):
-#    st.write(data())
-
-#st.subheader(f'Selected data (`{selected_data}`)')
-#st.write(data(selected_data))
+st.subheader(f'Selected data (`{selected_data}`)')
+st.write(title_data)
+st.write(data(selected_data))
