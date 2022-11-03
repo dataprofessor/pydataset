@@ -6,7 +6,7 @@ st.title('🎈 pydataset')
 
 selected_data = st.sidebar.selectbox('Select a dataset', data().dataset_id)
 #data()[data()['dataset_id'] == selected_data]['title']
-dataset = data()
+dataset = data()[ data()['dataset_id'] == selected_data]
 
 st.write(dataset)
 
