@@ -13,5 +13,5 @@ with st.expander('Show list of dataset'):
     st.write(data())
 
 st.subheader(f'Selected data (`{selected_data}`)')
-st.info(title_data)
+st.info(title_data['title'])
 st.write(data(selected_data))
